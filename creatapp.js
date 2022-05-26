@@ -3,21 +3,19 @@
 const express = require('express')
 
 const app = express()
+app.use(express.static('public'))
 
-const port = 5000
+const port = 5001
 
-//set up view engine
-app.set('view engine', 'ejs')
-app.set('views', './Views')
+
 
 // root route 
 app.get('/', (req, res) => {
-    res.render("311info", {
-
-
-    })
+   res.send('testing')
 
 })
+
+
 
 
 
